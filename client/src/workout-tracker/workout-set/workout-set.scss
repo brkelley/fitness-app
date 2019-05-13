@@ -1,0 +1,23 @@
+.workout-set-wrapper {
+    background-color: white;
+    margin-bottom: 24px;
+    padding: 12px 24px;
+
+    .workout-set-notes {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+        align-items: center;
+
+        .workout-set-index {
+            font-size: 1.5rem;
+        }
+
+        .workout-set-input {
+            font-size: 1.75rem;
+            padding: 10px 10px 10px 28px;
+            border: none;
+            border-bottom: solid 2px black;
+        }
+    }
+}

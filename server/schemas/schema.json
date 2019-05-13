@@ -1,0 +1,31 @@
+{
+    "routineMetadata": {
+        "routineName": "string",
+        "exercises": [
+            {
+                "exerciseName": "string",
+                "sets": [
+                    {
+                        "repCountLow": "number",
+                        "repCountHigh": "number"
+                    }
+                ]
+            }
+        ]
+    },
+    "history": {
+        "routineName": "string",
+        "routineMetadataId": "string",
+        "routineTimestamp": "number",
+        "exercises": {
+            "exerciseName": {
+                "sets": [
+                    {
+                        "weight": "number",
+                        "repCount": "number"
+                    }
+                ]
+            }
+        }
+    }
+}

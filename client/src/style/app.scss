@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import './variables.scss';
+
+body {
+    margin: 0 !important;
+    font-size: 36px;
+}
+
+.app-wrapper {
+    font-family: 'PT Sans', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: $background-white;
+}
+
+@import '../workout-tracker/workout-tracker.scss';
+@import '../components/components.scss';
