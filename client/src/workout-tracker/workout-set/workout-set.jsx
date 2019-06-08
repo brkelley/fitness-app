@@ -13,7 +13,7 @@ class WorkoutSet extends Component {
 
     renderWorkoutSet (set, index) {
         return (
-            <div className="workout-set-notes">
+            <div className="workout-set-notes" key={index}>
                 <div className="workout-set-index">{index + 1}</div>
                 <input className="workout-set-input" placeholder={set.weight} />
                 <input className="workout-set-input" placeholder={this.formatRepCountPlaceholder(set.repCountLow, set.repCountHigh)} />
@@ -36,7 +36,7 @@ class WorkoutSet extends Component {
         return (
             <div className="workout-set-wrapper">
                 <div className="workout-set-title">
-                    {this.props.workoutSetData.workoutName}
+                    {this.props.workoutSetData.name}
                 </div>
                 {this.renderWorkoutSets().map(e => e)}
             </div>

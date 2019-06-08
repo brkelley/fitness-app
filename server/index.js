@@ -1,15 +1,18 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
-const routes = require('./routes');
+app.use(cors());
+
+const db = require('./database/database.js');
+
+const routines = require('./routes/workout-routines.js');
+const history = require('./routes/workout-history.js');
 
 const port = 3000;
 
-app.use('/', routes);
+app.get('/routines', routines.routines);
+app.get('/history', history.history);
 
-app.listen(port, (err) => {
-  if (err) {
-    return console.log('something bad happened', err)
-  }
-
-  console.log(`server is listening on ${port}`)
+app.listen(3000, function () {
+    console.log('Listening on port 3000...');
 });
