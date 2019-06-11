@@ -21,7 +21,6 @@ class WorkoutTracker extends Component {
 
     render () {
         const { legDayRender } = this.state;
-        if (!legDayRender) return (<h1>BUTTS</h1>);
         return (
             <div>
                 { this.state.legDayRender }

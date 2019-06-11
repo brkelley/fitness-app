@@ -4,6 +4,11 @@ const paths = require("./paths");
 
 module.exports = {
     entry: './src/index.js',
+    output: {
+        path: __dirname + '/dist',
+        publicPath: '/',
+        filename: 'bundle.js'
+    },
     module: {
         rules: [
             {
@@ -34,15 +39,11 @@ module.exports = {
     resolve: {
         extensions: ['*', '.js', '.jsx']
     },
-    output: {
-        path: __dirname + '/dist',
-        publicPath: '/',
-        filename: 'bundle.js'
-    },
     plugins: [
         new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
+        historyApiFallback: true,
         contentBase: './dist',
         hot: true
     }

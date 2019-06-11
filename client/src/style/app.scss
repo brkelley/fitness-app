@@ -13,5 +13,11 @@ body {
     background-color: $background-white;
 }
 
+.workout-now-button {
+    border: solid 1px black;
+    font-size: 36px;
+}
+
+@import '../routines/routines.scss';
 @import '../workout-tracker/workout-tracker.scss';
 @import '../components/components.scss';
