@@ -18,6 +18,7 @@ body {
     font-size: 36px;
 }
 
+@import '../components/forms/forms.scss';
 @import '../routines/routines.scss';
 @import '../workout-tracker/workout-tracker.scss';
 @import '../components/components.scss';

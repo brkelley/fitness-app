@@ -6,7 +6,8 @@
   "scripts": {
     "test": "test",
     "start": "nodemon",
-    "start-mongo": "F:\\dev\\mongodb\\bin\\mongod.exe --dbpath \"F:\\dev\\dbdata\""
+    "start-mongo-windows": "F:\\dev\\mongodb\\bin\\mongod.exe --dbpath \"F:\\dev\\dbdata\"",
+    "start-mongo-mac": "/Users/brendankelley/dev/mongodb/bin/mongod --dbpath \"/Users/brendankelley/dev/mongodb/dbdata\""
   },
   "author": "brkelley",
   "license": "ISC",

@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Route, Link } from 'react-router-dom';
 import { retrieveAllRoutines } from './routines.util.js';
+
+import NewRoutine from './new-routine/new-routine.jsx';
 
 class Routines extends Component {
     constructor (props) {
         super(props);
 
         this.state = {
+            path: props.match.path,
             routines: [],
             emptyRoutinePrompt: this.renderEmptyRoutine()
         };
@@ -22,18 +26,20 @@ class Routines extends Component {
             <div className="empty-routines-wrapper">
                 <h1>No routines created</h1>
                 <div>
-                    <button className="workout-now-button">Create new one</button>
+                    <Link to="/routines/new">
+                        <button className="workout-now-button">Create new one</button>
+                    </Link>
                 </div>
             </div>
         );
     }
 
     render () {
-        if (this.state.routines.length === 0) {
-            return this.state.emptyRoutinePrompt;
-        } else {
-            return <h1>butts</h1>
-        }
+        return (
+            <div>
+                {this.renderEmptyRoutine()}
+            </div>
+        );
     }
 }
 

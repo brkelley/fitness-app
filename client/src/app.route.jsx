@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+
+const history = createBrowserHistory();
 
 import WorkoutTracker from './workout-tracker/workout-tracker.jsx';
 import Routines from './routines/routines.jsx';
+import NewRoutine from './routines/new-routine/new-routine.jsx';
 
 class AppRoute extends Component {
     render() {
         return (
-            <Router>
+            <Router history={history}>
                 <div>
                     <Route exact path="/" component={WorkoutTracker} />
-                    <Route path="/routines" component={Routines} />
+                    <Route exact path="/routines" component={Routines} />
+                    <Route exact path="/routines/new" component={NewRoutine} />
                 </div>
             </Router>
         );

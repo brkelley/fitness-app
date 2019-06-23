@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const workoutRoutineSchema = new mongoose.Schema({
-    routineMetadata: String,
+    routineName: String,
     exercises: [{
         exerciseName: String,
         sets: [{

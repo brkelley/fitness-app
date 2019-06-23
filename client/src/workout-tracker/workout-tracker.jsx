@@ -20,7 +20,6 @@ class WorkoutTracker extends Component {
     }
 
     render () {
-        const { legDayRender } = this.state;
         return (
             <div>
                 { this.state.legDayRender }
